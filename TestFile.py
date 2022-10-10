@@ -16,34 +16,6 @@ file = "Information.xlsx"
 wb = load_workbook(file)
 wb.active = 0
 sheet = wb.active
-#
-# num = 0
-# for i in range(3, len(sheet['A']) + 1):
-#     id = str(sheet['A' + str(i)].value)
-#     area = str(sheet['B' + str(i)].value)
-#     medOrganization = str(sheet['C' + str(i)].value)
-#     numKard = str(sheet['D' + str(i)].value)
-#     age = str(sheet['E' + str(i)].value)
-#     gender = str(sheet['F' + str(i)].value)
-#     dataHospital = str(sheet['G' + str(i)].value)
-#     datadischarge = str(sheet['H' + str(i)].value)
-#     mkb = str(sheet['I' + str(i)].value)
-#     diagnosis = str(sheet['J' + str(i)].value)
-#     resultHealth = str(sheet['K' + str(i)].value)
-#     healtIshod = str(sheet['L' + str(i)].value)
-#     typeOfAssistance = str(sheet['L' + str(i)].value)
-#     resultKVI = str(sheet['L' + str(i)].value)
-#     dataResultKVI = str(sheet['L' + str(i)].value)
-#     if area == "Восточно-Казахстанская область":
-#         num += 1
-#         lblArea = i
-#         print(lblArea)
-#
-# # for i in range(3, len(sheet['A']) + 1):
-# #     dataHospital = str(sheet['G' + str(i)].value)
-#
-# # dataset = pd.read_csv('hour_online.csv', index_col=['Time'], parse_dates=['Time'])
-# # plotly_df(dataHospital, title="Online users")
 m_y = []
 dataX = [datetime.date(year=2020, month=1, day=1), datetime.date(year=2021, month=1, day=1)]
 def plot():
