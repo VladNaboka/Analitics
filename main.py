@@ -32,6 +32,7 @@ import ml_metrics as metrics
 #     resultKVI = str(sheet['L' + str(i)].value)
 #     dataResultKVI = str(sheet['L' + str(i)].value)
 # print(area)
+
 file = "Information.xlsx"
 wb = load_workbook(file)
 wb.active = 0
@@ -41,11 +42,8 @@ num = 0
 m_arr = []
 dataX = [datetime.date(year=2020, month=1, day=1), datetime.date(year=2021, month=1, day=1)]
 dataXNew = [datetime.date(year=2020, month=1, day=1), datetime.date(year=2021, month=1, day=1), datetime.date(year=2022, month=1, day=1)]
-pred = model.XML_CTYPE_ANY
-trn = ['2013-05-26']
-r2 = r2_score(trn, pred[1:32])
-print('R^2: %1.2f' % r2)
-metrics.rmse(trn, pred[1:32])
+area = ['Павлодарская область', 'Восточно-Казахстанская область']
+
 def plot():
     fig = Figure(figsize=(5, 5), dpi=100)
     y = m_arr
@@ -97,6 +95,13 @@ comboY = Combobox(master=window)
 comboY['values'] = (2020, 2021)
 comboY.current(0)
 comboY.pack()
+
+# lblYears = Label(master=window, text="Область", font=("Arial Bold", 10))
+# lblYears.pack()
+# comboA = Combobox(master=window)
+# comboA['values'] = ('Павлодарская область', 'Восточно-Казахстанская область')
+# comboA.current(0)
+# comboA.pack()
 
 btnAdd = Button(master=window, text="Записать", command=printInf)
 btnAdd.pack()
